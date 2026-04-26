@@ -1,0 +1,325 @@
+[gd_scene format=3 uid="uid://b5ypop7is4lti"]
+
+[ext_resource type="Script" uid="uid://jb383hdgik1h" path="res://scripts/battle.gd" id="1_vceff"]
+[ext_resource type="Shader" uid="uid://b30l3bfbeut4f" path="res://shaders/bg.gdshader" id="2_ekamt"]
+[ext_resource type="PackedScene" uid="uid://211fnd3tva35" path="res://scenes/board.tscn" id="3_djc8l"]
+[ext_resource type="PackedScene" uid="uid://e0odb71gn5ox" path="res://scenes/determination.tscn" id="4_h4dll"]
+[ext_resource type="Texture2D" uid="uid://bygjwencipj7k" path="res://images/buttons/FIGHT 0.png" id="5_p0caf"]
+[ext_resource type="Texture2D" uid="uid://sk8kpv6h1kvs" path="res://images/buttons/FIGHT 1.png" id="6_61i1y"]
+[ext_resource type="Texture2D" uid="uid://k63on8yy8i8r" path="res://images/buttons/ACT 0.png" id="7_saiin"]
+[ext_resource type="Texture2D" uid="uid://oppwhjikekp" path="res://images/buttons/ACT 1.png" id="8_dd63g"]
+[ext_resource type="Texture2D" uid="uid://uwetlfyrb8vv" path="res://images/buttons/ITEM 0.png" id="9_fpf3k"]
+[ext_resource type="Texture2D" uid="uid://bvbupthrswmet" path="res://images/buttons/ITEM 1.png" id="10_bi5l8"]
+[ext_resource type="Texture2D" uid="uid://3om1le4hjaps" path="res://images/buttons/MERCY 0.png" id="11_jt4d8"]
+[ext_resource type="Texture2D" uid="uid://ce4nmvw66qs2" path="res://images/buttons/MERCY 1.png" id="12_kl6ie"]
+[ext_resource type="Texture2D" uid="uid://c03xtgdq33pey" path="res://images/ut-heart.png" id="13_1m01a"]
+[ext_resource type="Script" uid="uid://wcq6g1l13vni" path="res://scripts/player_msg.gd" id="14_djc8l"]
+[ext_resource type="FontFile" uid="uid://bd3m3qgeqqbb7" path="res://fonts/crypt-of-tomorrow-ut-font-no-rus.ttf" id="14_lv4so"]
+[ext_resource type="Texture2D" uid="uid://blsikb1ji2xfm" path="res://images/HP.png" id="15_eivww"]
+[ext_resource type="PackedScene" uid="uid://20j7usw5awcs" path="res://scenes/danmu/evil_gd.tscn" id="17_djc8l"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_i431l"]
+shader = ExtResource("2_ekamt")
+shader_parameter/zoom = 1.0
+shader_parameter/NUM_LAYERS = 7.0
+shader_parameter/brightness1 = 1.0
+shader_parameter/brightness2 = 0.5
+shader_parameter/brightness3 = 0.5
+shader_parameter/twinkle = 1.0
+shader_parameter/star_rays = 1.0
+shader_parameter/speed = 1.0
+shader_parameter/color1 = Vector3(0.498, 0.588, 1.128)
+shader_parameter/color2 = Vector3(0.303, 0.388, 0.273)
+shader_parameter/color3 = Vector3(1.763, 0.938, 0.787)
+shader_parameter/color4 = Vector3(-2.982, 1.818, 1.948)
+shader_parameter/adjust_queue = Vector2(123.34, 456.821)
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_7sfm4"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_22sa7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_p0caf")
+}],
+"loop": true,
+"name": &"0",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_61i1y")
+}],
+"loop": true,
+"name": &"1",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_aacmo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_saiin")
+}],
+"loop": true,
+"name": &"0",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_dd63g")
+}],
+"loop": true,
+"name": &"1",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rggsl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_fpf3k")
+}],
+"loop": true,
+"name": &"0",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_bi5l8")
+}],
+"loop": true,
+"name": &"1",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fljlq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_jt4d8")
+}],
+"loop": true,
+"name": &"0",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_kl6ie")
+}],
+"loop": true,
+"name": &"1",
+"speed": 5.0
+}]
+
+[sub_resource type="Curve" id="Curve_rwtbh"]
+_data = [Vector2(0.58518517, 1), 0.0, 0.0, 0, 0]
+point_count = 1
+
+[sub_resource type="CurveXYZTexture" id="CurveXYZTexture_f0g0v"]
+curve_x = SubResource("Curve_rwtbh")
+
+[sub_resource type="Curve" id="Curve_at2n2"]
+_data = [Vector2(0.45555556, 1), 0.0, 0.0, 0, 0]
+point_count = 1
+
+[sub_resource type="Curve" id="Curve_e50ek"]
+_data = [Vector2(0.44074076, 1), 0.0, 0.0, 0, 0]
+point_count = 1
+
+[sub_resource type="CurveXYZTexture" id="CurveXYZTexture_mpb26"]
+curve_x = SubResource("Curve_at2n2")
+curve_y = SubResource("Curve_e50ek")
+
+[sub_resource type="Animation" id="Animation_djc8l"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("board:scale:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0.5, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("board:scale:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0.5, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_h4dll"]
+resource_name = "long_board"
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("board:scale:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(0.5, -0.25, 0, 0.22674811, -14, 2, -0.16666667, -0.25, 0, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("board:scale:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(0.5, -0.25, 0, 0.25, 0, 0.5, -0.16666667, 0, 0, 0),
+"times": PackedFloat32Array(0, 1)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_p0caf"]
+_data = {
+&"RESET": SubResource("Animation_djc8l"),
+&"long_board": SubResource("Animation_h4dll")
+}
+
+[node name="Battle" type="Node2D" unique_id=299170351]
+script = ExtResource("1_vceff")
+selection = null
+
+[node name="ColorRect" type="TextureRect" parent="." unique_id=2129035493]
+material = SubResource("ShaderMaterial_i431l")
+offset_left = -8.0
+offset_top = -7.0
+offset_right = 651.0
+offset_bottom = 505.0
+texture = SubResource("NoiseTexture2D_7sfm4")
+
+[node name="board" parent="." unique_id=331059561 instance=ExtResource("3_djc8l")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 320.0
+offset_top = 310.0
+offset_right = 320.0
+offset_bottom = 310.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+
+[node name="EvilGD" parent="." unique_id=772590474 instance=ExtResource("17_djc8l")]
+visible = false
+position = Vector2(412, 227)
+
+[node name="CharacterBody2D" parent="." unique_id=1577031572 instance=ExtResource("4_h4dll")]
+position = Vector2(320, 310)
+
+[node name="selections" type="HBoxContainer" parent="." unique_id=648453900]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = 446.0
+offset_right = 640.0
+offset_bottom = 446.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_constants/separation = 150
+alignment = 1
+
+[node name="fight" type="Control" parent="selections" unique_id=1533843261]
+layout_mode = 2
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="selections/fight" unique_id=573278680]
+sprite_frames = SubResource("SpriteFrames_22sa7")
+animation = &"0"
+autoplay = "0"
+
+[node name="act" type="Control" parent="selections" unique_id=756981071]
+layout_mode = 2
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="selections/act" unique_id=312360390]
+sprite_frames = SubResource("SpriteFrames_aacmo")
+animation = &"0"
+autoplay = "0"
+
+[node name="item" type="Control" parent="selections" unique_id=1411820364]
+layout_mode = 2
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="selections/item" unique_id=1226391601]
+sprite_frames = SubResource("SpriteFrames_rggsl")
+animation = &"0"
+autoplay = "0"
+
+[node name="mercy" type="Control" parent="selections" unique_id=1455943655]
+layout_mode = 2
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="selections/mercy" unique_id=1040138458]
+sprite_frames = SubResource("SpriteFrames_fljlq")
+animation = &"0"
+autoplay = "0"
+
+[node name="sl_soul" type="Sprite2D" parent="." unique_id=200230929]
+modulate = Color(1, 0, 0, 1)
+position = Vector2(94, 447)
+texture = ExtResource("13_1m01a")
+
+[node name="player_msg" type="Control" parent="." unique_id=988376688]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 39.0
+offset_top = 399.0
+offset_right = 79.0
+offset_bottom = 439.0
+script = ExtResource("14_djc8l")
+
+[node name="namenlv" type="Label" parent="player_msg" unique_id=929046248]
+layout_mode = 0
+offset_right = 160.0
+offset_bottom = 20.0
+theme_override_fonts/font = ExtResource("14_lv4so")
+text = "Summor LV1"
+
+[node name="HPBar" type="TextureProgressBar" parent="player_msg" unique_id=1708426946]
+layout_mode = 0
+offset_left = 238.0
+offset_right = 258.0
+offset_bottom = 17.0
+max_value = 20.0
+value = 10.0
+nine_patch_stretch = true
+texture_under = SubResource("CurveXYZTexture_f0g0v")
+texture_progress = SubResource("CurveXYZTexture_mpb26")
+
+[node name="HPtxt" type="Label" parent="player_msg/HPBar" unique_id=154460190]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 25.0
+offset_top = -7.5
+offset_right = 185.0
+offset_bottom = 12.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("14_lv4so")
+text = "20/20"
+
+[node name="Hp" type="Sprite2D" parent="player_msg/HPBar" unique_id=161298905]
+position = Vector2(-19, 9)
+texture = ExtResource("15_eivww")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1617107610]
+libraries/ = SubResource("AnimationLibrary_p0caf")

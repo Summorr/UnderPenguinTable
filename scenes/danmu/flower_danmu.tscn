@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://d3nhlmtp7encr"]
+
+[ext_resource type="Script" uid="uid://baq2c0rsyvx83" path="res://scripts/danmu/flower_danmu.gd" id="1_1pmdd"]
+[ext_resource type="PackedScene" uid="uid://20j7usw5awcs" path="res://scenes/danmu/evil_gd.tscn" id="2_qihpk"]
+
+[node name="flower_danmu" type="Node2D" unique_id=1539872940 groups=["danmu"]]
+script = ExtResource("1_1pmdd")
+
+[node name="EvilGD" parent="." unique_id=707393942 instance=ExtResource("2_qihpk")]
+scale = Vector2(0.25, 0.25)
+
+[node name="Timer" type="Timer" parent="." unique_id=830867925]
+wait_time = 0.1
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

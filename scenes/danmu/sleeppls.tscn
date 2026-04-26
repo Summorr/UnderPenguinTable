@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cflnfilurx6gb"]
+
+[ext_resource type="FontFile" uid="uid://bp5djpirqxc31" path="res://fonts/paps字体.ttf" id="2_ob265"]
+[ext_resource type="PackedScene" uid="uid://b8g1b3a8s6k8w" path="res://scenes/msg_txt.tscn" id="2_rgula"]
+
+[node name="sleeppls" type="Node2D" unique_id=363059494]
+
+[node name="msg_txt" parent="." unique_id=1649634934 instance=ExtResource("2_rgula")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -111.5
+offset_top = -50.0
+offset_right = 111.5
+offset_bottom = 50.0
+theme_override_fonts/normal_font = ExtResource("2_ob265")
+text = "休息一下，马上回来"
+metadata/_edit_use_anchors_ = true

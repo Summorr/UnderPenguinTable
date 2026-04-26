@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cle7i0cmiak0t"]
+
+[ext_resource type="PackedScene" uid="uid://brb413tge4nf5" path="res://scenes/hurthplabel.tscn" id="1_ncp31"]
+
+[node name="gameover" type="Node2D" unique_id=1763967038]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1166667949]
+offset_left = -34.0
+offset_top = -27.0
+offset_right = 691.0
+offset_bottom = 544.0
+color = Color(0, 0, 0, 1)
+
+[node name="hurthplabel" parent="." unique_id=1485996055 instance=ExtResource("1_ncp31")]
+offset_left = 210.0
+offset_top = 214.0
+offset_right = 439.0
+offset_bottom = 269.0
+text = "YOU R DEAD"
+txt = "YOU R DEAD"

@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://e0odb71gn5ox"]
+
+[ext_resource type="Script" uid="uid://ltu3h0fyocg4" path="res://scripts/determination.gd" id="1_n82se"]
+[ext_resource type="Texture2D" uid="uid://c03xtgdq33pey" path="res://images/ut-heart.png" id="2_n82se"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_n82se"]
+radius = 9.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a022n"]
+size = Vector2(2, 2)
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1577031572]
+script = ExtResource("1_n82se")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=801008837]
+modulate = Color(1, 0, 0, 1)
+position = Vector2(0, 1)
+texture = ExtResource("2_n82se")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=974721597]
+shape = SubResource("CircleShape2D_n82se")
+
+[node name="HitArea" type="Area2D" parent="." unique_id=966032603 groups=["determination"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitArea" unique_id=1440647458]
+shape = SubResource("RectangleShape2D_a022n")
+debug_color = Color(1, 1, 1, 0.41960785)
+
+[connection signal="area_shape_entered" from="HitArea" to="." method="_on_hit_area"]

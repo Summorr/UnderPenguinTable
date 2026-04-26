@@ -1,0 +1,125 @@
+[gd_scene format=3 uid="uid://fgisab11sg6j"]
+
+[ext_resource type="Script" uid="uid://ppvu02a70rw2" path="res://scripts/bagpack.gd" id="1_jxbjy"]
+
+[node name="Bagpack" type="Control" unique_id=1115298898]
+layout_mode = 3
+anchors_preset = 0
+scale = Vector2(1.6, 1.6)
+script = ExtResource("1_jxbjy")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1083503270]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 4.0
+offset_right = 58.0
+offset_bottom = 22.0
+color = Color(1, 0, 0, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1159529095]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label1" type="Label" parent="VBoxContainer" unique_id=2055435019]
+layout_mode = 2
+text = "物品"
+
+[node name="Label2" type="Label" parent="VBoxContainer" unique_id=397676880]
+layout_mode = 2
+text = "物品"
+
+[node name="Label3" type="Label" parent="VBoxContainer" unique_id=68944475]
+layout_mode = 2
+text = "物品"
+
+[node name="Label4" type="Label" parent="VBoxContainer" unique_id=1051080056]
+layout_mode = 2
+text = "物品"
+
+[node name="Label5" type="Label" parent="VBoxContainer" unique_id=881028553]
+layout_mode = 2
+text = "物品"
+
+[node name="Label6" type="Label" parent="VBoxContainer" unique_id=2111378288]
+layout_mode = 2
+text = "物品"
+
+[node name="Label7" type="Label" parent="VBoxContainer" unique_id=1198526479]
+layout_mode = 2
+text = "物品"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="." unique_id=1996661322]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 343.0
+offset_top = 113.0
+offset_right = 383.0
+offset_bottom = 214.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="use" type="Button" parent="VBoxContainer2" unique_id=731272409]
+layout_mode = 2
+text = "使用"
+
+[node name="add" type="Button" parent="VBoxContainer2" unique_id=202568991]
+layout_mode = 2
+text = "添加"
+
+[node name="drop" type="Button" parent="VBoxContainer2" unique_id=2046152172]
+layout_mode = 2
+text = "丢弃"
+
+[node name="info" type="Button" parent="VBoxContainer2" unique_id=253644026]
+layout_mode = 2
+text = "说明"
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=349905945]
+layout_mode = 0
+offset_left = 217.0
+offset_top = 3.0
+offset_right = 380.0
+offset_bottom = 73.0
+
+[node name="ColorRect3" type="ColorRect" parent="." unique_id=1568526098]
+layout_mode = 0
+offset_left = 220.0
+offset_top = 6.0
+offset_right = 377.0
+offset_bottom = 70.0
+color = Color(0, 0, 0, 1)
+
+[node name="input" type="RichTextLabel" parent="." unique_id=1955830757]
+layout_mode = 0
+offset_left = 222.0
+offset_top = 10.0
+offset_right = 375.0
+offset_bottom = 65.0
+bbcode_enabled = true
+text = "*输出[color=\"red\"]222[/color][br][b]1[/b]14"
+scroll_active = false
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=365169273]
+layout_mode = 0
+offset_left = 219.0
+offset_top = 74.0
+offset_right = 330.0
+offset_bottom = 101.0
+max_value = 20.0
+show_percentage = false
+
+[node name="HPtxt" type="Label" parent="ProgressBar" unique_id=413970372]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "20/20"
+
+[connection signal="pressed" from="VBoxContainer2/use" to="." method="_on_use_pressed"]
+[connection signal="pressed" from="VBoxContainer2/add" to="." method="_on_add_pressed"]
+[connection signal="pressed" from="VBoxContainer2/drop" to="." method="_on_drop_pressed"]
+[connection signal="pressed" from="VBoxContainer2/info" to="." method="_on_info_pressed"]

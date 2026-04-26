@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bds5ngsqpjfbp"]
+
+[ext_resource type="Script" uid="uid://de0xmmep2py74" path="res://scripts/test.gd" id="1_bl13t"]
+[ext_resource type="Texture2D" uid="uid://oya8wpn6jmc8" path="res://icon.svg" id="2_iyx0m"]
+[ext_resource type="PackedScene" uid="uid://cqed78w13vd2n" path="res://scenes/danmu/normal_flower.tscn" id="4_74lek"]
+
+[node name="test" type="Node2D" unique_id=769822462]
+script = ExtResource("1_bl13t")
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=1177830865]
+position = Vector2(347, 316)
+texture = ExtResource("2_iyx0m")
+
+[node name="flower_danmu3" parent="." unique_id=2013619544 instance=ExtResource("4_74lek")]
+position = Vector2(348, 100)

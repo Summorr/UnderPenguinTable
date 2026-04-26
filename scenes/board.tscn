@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://211fnd3tva35"]
+
+[ext_resource type="Texture2D" uid="uid://dhatae1bca1hg" path="res://images/board.png" id="1_p0ybc"]
+[ext_resource type="Script" uid="uid://3lgk6qfy5a3l" path="res://scripts/board.gd" id="2_tx6nw"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_tx6nw"]
+normal = Vector2(-1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_nglv8"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_fv4ni"]
+normal = Vector2(0, 1)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_dxjtj"]
+normal = Vector2(1, 0)
+
+[node name="board" type="NinePatchRect" unique_id=1630918303]
+anchors_preset = -1
+anchor_left = 0.23400001
+anchor_top = 0.312
+anchor_right = 0.23400001
+anchor_bottom = 0.312
+offset_left = -149.76001
+offset_top = -149.76001
+offset_right = 150.23999
+offset_bottom = 150.23999
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_p0ybc")
+region_rect = Rect2(0, 0, 25, 25)
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+script = ExtResource("2_tx6nw")
+
+[node name="r" type="StaticBody2D" parent="." unique_id=1411116690]
+
+[node name="v" type="CollisionShape2D" parent="r" unique_id=1175102077]
+position = Vector2(299, 150)
+shape = SubResource("WorldBoundaryShape2D_tx6nw")
+
+[node name="d" type="StaticBody2D" parent="." unique_id=491386664]
+position = Vector2(0, -1)
+
+[node name="h" type="CollisionShape2D" parent="d" unique_id=2117888381]
+position = Vector2(150, 300)
+shape = SubResource("WorldBoundaryShape2D_nglv8")
+
+[node name="u" type="StaticBody2D" parent="." unique_id=778901602]
+
+[node name="h" type="CollisionShape2D" parent="u" unique_id=833053904]
+position = Vector2(150, 1)
+shape = SubResource("WorldBoundaryShape2D_fv4ni")
+
+[node name="l" type="StaticBody2D" parent="." unique_id=1414182980]
+
+[node name="v" type="CollisionShape2D" parent="l" unique_id=236675620]
+position = Vector2(1, 150)
+shape = SubResource("WorldBoundaryShape2D_dxjtj")

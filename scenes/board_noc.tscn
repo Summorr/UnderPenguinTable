@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dk5ssjgnb1pxt"]
+
+[ext_resource type="Texture2D" uid="uid://dhatae1bca1hg" path="res://images/board.png" id="1_oimbo"]
+
+[node name="board" type="NinePatchRect" unique_id=1630918303]
+anchors_preset = -1
+anchor_left = 0.23400001
+anchor_top = 0.312
+anchor_right = 0.23400001
+anchor_bottom = 0.312
+offset_left = -149.76001
+offset_top = -149.76001
+offset_right = 150.23999
+offset_bottom = 150.23999
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_oimbo")
+region_rect = Rect2(0, 0, 25, 25)
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10

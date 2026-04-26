@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://b8g1b3a8s6k8w"]
+
+[ext_resource type="FontFile" uid="uid://cs60b5fqk1jpg" path="res://fonts/普通字体.ttf" id="1_6rrea"]
+[ext_resource type="Script" uid="uid://nu8qm3tyx82t" path="res://scripts/msg_txt.gd" id="2_thiwu"]
+
+[node name="msg_txt" type="RichTextLabel" unique_id=1649634934]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/line_separation = 24
+theme_override_fonts/normal_font = ExtResource("1_6rrea")
+theme_override_font_sizes/normal_font_size = 48
+bbcode_enabled = true
+text = "* 棍 母 发 起 进 攻 测试、
+1111"
+fit_content = true
+scroll_active = false
+script = ExtResource("2_thiwu")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=246774293]
+visible = false
+layout_mode = 0
+offset_right = 636.0
+offset_bottom = 376.0
+theme_override_constants/line_separation = 24
+theme_override_fonts/normal_font = ExtResource("1_6rrea")
+theme_override_font_sizes/normal_font_size = 48
+bbcode_enabled = true
+text = "已弃用Dont use it"
+fit_content = true
+scroll_active = false

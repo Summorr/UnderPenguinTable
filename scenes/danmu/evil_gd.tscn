@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://20j7usw5awcs"]
+
+[ext_resource type="Script" uid="uid://cupukccak5whl" path="res://scripts/danmu/danmu_ini.gd" id="1_nq2w3"]
+[ext_resource type="Texture2D" uid="uid://dhatae1bca1hg" path="res://images/board.png" id="2_nq2w3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0f7gi"]
+size = Vector2(112, 114)
+
+[node name="EvilGD" type="Area2D" unique_id=707393942 groups=["bullet", "danmu"]]
+script = ExtResource("1_nq2w3")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=808574382]
+scale = Vector2(7.4666667, 7.6000004)
+texture = ExtResource("2_nq2w3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1464917434]
+shape = SubResource("RectangleShape2D_0f7gi")
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=1497796952]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenEnabler2D" to="." method="_on_visible_on_screen_enabler_2d_screen_exited"]

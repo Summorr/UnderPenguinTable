@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://br08rgnob0vmr"]
+
+[ext_resource type="Script" uid="uid://uc3kgbqnbcl4" path="res://scripts/global.gd" id="1_nmxvb"]
+[ext_resource type="AudioStream" uid="uid://bmyqxvs3ynloe" path="res://sounds/choose.wav" id="2_opebo"]
+
+[node name="global" type="Node" unique_id=1931376831]
+script = ExtResource("1_nmxvb")
+
+[node name="ASP" type="AudioStreamPlayer" parent="." unique_id=1228235430]
+stream = ExtResource("2_opebo")
+
+[node name="ASP2" type="AudioStreamPlayer" parent="." unique_id=1886285400]
+stream = ExtResource("2_opebo")
+
+[node name="ASP3" type="AudioStreamPlayer" parent="." unique_id=2008310096]
+stream = ExtResource("2_opebo")

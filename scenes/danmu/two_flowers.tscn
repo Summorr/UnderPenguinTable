@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://5stf4madggdp"]
+
+[ext_resource type="PackedScene" uid="uid://d3nhlmtp7encr" path="res://scenes/danmu/flower_danmu.tscn" id="1_wscpb"]
+
+[node name="two_flowers" type="Node2D" unique_id=915134663]
+
+[node name="flower_danmu" parent="." unique_id=1539872940 instance=ExtResource("1_wscpb")]
+position = Vector2(-112, 0)
+
+[node name="flower_danmu2" parent="." unique_id=402576807 instance=ExtResource("1_wscpb")]
+position = Vector2(112, 0)

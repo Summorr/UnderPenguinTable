@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://kr2i4bn50kgx"]
+
+[ext_resource type="Script" uid="uid://cy3tnjpcjmw1d" path="res://scripts/enemy.gd" id="1_7p1mj"]
+[ext_resource type="Texture2D" uid="uid://oya8wpn6jmc8" path="res://icon.svg" id="2_md0e3"]
+
+[node name="enemy_normal" type="Control" unique_id=1941977460]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 165.0
+offset_top = 94.0
+offset_right = 165.0
+offset_bottom = 94.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7p1mj")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=836858482]
+texture = ExtResource("2_md0e3")

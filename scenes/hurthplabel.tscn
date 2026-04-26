@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://brb413tge4nf5"]
+
+[ext_resource type="FontFile" uid="uid://evw461o50s3m" path="res://fonts/玩家造成伤害字体.TTF" id="1_owiae"]
+[ext_resource type="Script" uid="uid://x35yg5y88xwc" path="res://scripts/hurthplabel.gd" id="2_313wl"]
+
+[node name="hurthplabel" type="RichTextLabel" unique_id=1485996055]
+modulate = Color(1, 0, 0, 1)
+offset_left = -111.0
+offset_right = 118.0
+offset_bottom = 55.0
+theme_override_fonts/normal_font = ExtResource("1_owiae")
+theme_override_font_sizes/normal_font_size = 36
+text = "67"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+script = ExtResource("2_313wl")

@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://fgisab11sg6j"]
+
+[ext_resource type="Script" uid="uid://ppvu02a70rw2" path="res://control.gd" id="1_0fbet"]
+
+[node name="Control" type="Control" unique_id=1115298898]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_0fbet")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1083503270]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 4.0
+offset_right = 58.0
+offset_bottom = 22.0
+color = Color(1, 0, 0, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1159529095]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label1" type="Label" parent="VBoxContainer" unique_id=2055435019]
+layout_mode = 2
+text = "物品"
+
+[node name="Label2" type="Label" parent="VBoxContainer" unique_id=397676880]
+layout_mode = 2
+text = "物品"
+
+[node name="Label3" type="Label" parent="VBoxContainer" unique_id=68944475]
+layout_mode = 2
+text = "物品"
+
+[node name="Label4" type="Label" parent="VBoxContainer" unique_id=1051080056]
+layout_mode = 2
+text = "物品"
+
+[node name="Label5" type="Label" parent="VBoxContainer" unique_id=881028553]
+layout_mode = 2
+text = "物品"
+
+[node name="Label6" type="Label" parent="VBoxContainer" unique_id=2111378288]
+layout_mode = 2
+text = "物品"
+
+[node name="Label7" type="Label" parent="VBoxContainer" unique_id=1198526479]
+layout_mode = 2
+text = "物品"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="." unique_id=1996661322]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="VBoxContainer2" unique_id=731272409]
+layout_mode = 2

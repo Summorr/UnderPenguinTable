@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://w1cybx4y856e"]
+
+[ext_resource type="Script" uid="uid://c7c8vixhua1wc" path="res://scripts/enemies/cry_birdie.gd" id="1_pyghp"]
+[ext_resource type="Texture2D" uid="uid://dyi6yt5r1eile" path="res://images/enemies/bird/sad.png" id="2_ytjoc"]
+
+[sub_resource type="Curve" id="Curve_pyghp"]
+_data = [Vector2(0.21739128, 0.17509735), 0.0, 0.0, 0, 0, Vector2(0.8768115, 0.0038911104), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[node name="enemy_normal" type="Control" unique_id=1941977460]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pyghp")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=836858482]
+scale = Vector2(0.20333847, 0.20333838)
+texture = ExtResource("2_ytjoc")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=1999744015]
+texture = ExtResource("2_ytjoc")
+gravity = Vector2(0, 0)
+scale_amount_curve = SubResource("Curve_pyghp")

@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://c7d6bt2u8fvlb"]
+
+[ext_resource type="PackedScene" uid="uid://cqed78w13vd2n" path="res://scenes/danmu/normal_flower.tscn" id="1_ikid4"]
+
+[node name="four_nf" type="Node2D" unique_id=1779132049]
+
+[node name="normal_flower_what" parent="." unique_id=1539872940 instance=ExtResource("1_ikid4")]
+position = Vector2(-160, -123)
+speed = 0.25
+dt = 0.2
+
+[node name="normal_flower_what2" parent="." unique_id=1269857752 instance=ExtResource("1_ikid4")]
+position = Vector2(160, -123)
+speed = 0.25
+dt = 0.2
+
+[node name="normal_flower_what3" parent="." unique_id=130161022 instance=ExtResource("1_ikid4")]
+position = Vector2(-160, 111)
+speed = 0.25
+dt = 0.2
+
+[node name="normal_flower_what4" parent="." unique_id=1637096437 instance=ExtResource("1_ikid4")]
+position = Vector2(160, 111)
+speed = 0.25
+dt = 0.2
